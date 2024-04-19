@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="script.css">
+</head>
+
+<!-- gets the background image -->
+<body style="background-size: cover;">
+
+ <!-- loading screen -->
+ <div id="title" class="title">Murder Mystery<br></div>
+
+ <div id="lost" class="lost" style="display: none;">GAME OVER<br></div>
+
+ <div id="won" class="won" style="display: none;">CONGRATS, YOU HAVE WON!<br></div>
+
+ <div id="splash" class="splash">
+    <img src="assets/spinningKnife.gif" style="display: block; margin: 0 auto;">
+ </div>
+
+<!-- for the page -->
+<div id="main" style="display:none;">
+    
+    <!-- div for the timer -->
+    <div id="timer_container" style="display: none;">
+    <div class="timer-circle" id="timer">10
+ </div> 
+</div>
+
+    <!-- div for the game text -->
+    <div id="game_text"></div>
+
+    <!-- div for the buttons to center and spaced out -->
+    <div id="buttons" style="display: flex; flex-direction: column; align-items: center; "> 
+
+        <div id="button_a" style="margin-bottom: 10px;">
+            <button id="but_a" onclick="key_input('A');" style="font-size: 20px; display: none;" class="game_buttons"></button>
+        </div>
+
+        <div id="button_b" style="margin-bottom: 10px;">
+            <button id="but_b" onclick="key_input('B');" style="font-size:20px; display: none;" class="game_buttons"></button>
+        </div>
+
+        <div id="button_cont"style="margin-bottom: 10px;">
+            <button id="but_cont" onclick="key_input('continue');" style="font-size:20px;" class="game_buttons" >Continue</button>
+        </div>
+
+        <div id="button_reset"style="margin-bottom: 10px;">
+            <button id="but_reset" onclick="refreshPage()" style="font-size:20px;" class="game_buttons">Restart</button>
+        </div>
+    </div>
+</div>
+
+<!-- gets the music -->
+<audio id="bg_music" src="assets/music.mp3" loop></audio>
+<div class="music-toggle">
+    <button id="musicButton" class="music_but" style="font-size: 15px;">Play Music</button>
+</div>
+
+
+ </body>
+</html>

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&family=Titan+One&display=swap');
+
+  .title{
+  font-family: 'Anton';
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+  background: -webkit-linear-gradient(#8d1515, #ffffff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 2px black; /* Adjust the thickness and color as needed */
+  }
+
+  .lost{
+    font-family: 'Anton';
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    background: -webkit-linear-gradient(#ff0000, #000000);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 2px black; 
+    }
+
+    .won{
+      font-family: 'Anton';
+      font-size: 50px;
+      font-weight: bolder;
+      text-align: center;
+      background: -webkit-linear-gradient(#158d4b, #ffffff);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 2px black; 
+      }
+  
+  .timer-circle {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: 8px solid black;
+    background: -webkit-linear-gradient(#083047, #ffffff);
+    
+}
+
+
+#game_text{
+    font-family: 'Paytone One';
+    font-size: 21px;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+
+.game_buttons {
+  appearance: button;
+  background-color: darkgray;
+  background-image: linear-gradient(to bottom, darkgray, rgba(35, 33, 33, 0.523));
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: darkgray 4px 4px 0 0,darkgray 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Titan One';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.game_buttons:hover {
+  scale: 1.05;
+  background-image: linear-gradient(to bottom, #083047, rgb(255, 255, 255));
+}
+
+.music_but {
+    appearance: button;
+    background-color: gray;
+    background-image: linear-gradient(to bottom, darkgray, rgba(35, 33, 33, 0.523));
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: gray 4px 4px 0 0, gray 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Titan One';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 1px 10px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .music_but:hover {
+    scale: 1.05;
+    background-image: linear-gradient(to bottom, rgb(8, 48, 71), rgb(255, 255, 255));
+  }
+

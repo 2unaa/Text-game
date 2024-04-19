@@ -1,0 +1,522 @@
+{
+    "start_state" : "Backstory",
+
+    "states" : {
+
+        "Backstory" : {
+            "text" : "• YOU are the murderer.<br>• You are currently being investigated for the murder of your former friend and boss.<br>• As the murderer, use the details that is given to make up a good cover up story and get away with murder.<br>• You will get 10 seconds to answer each question or you lose.<br>• Remember: Your goal is to sound innocent, not tell the whole truth.<br>",
+            "text_color": "#B4D4CF",
+            "image_change" : "/textGame/assets/background.png",
+            "show_cont" : "yes",
+            "show_title" : "yes",
+            "next_state" : [
+                               {
+                                    "state_name" : "Details",
+                                    "key_input"  : "continue"
+                                }
+                            ]
+                },
+
+        "Details" : {
+            "text" : "Details:<br>• It was a cold rainy day.<br>• You heard the company you worked at is in support of melting Antarctica for natural gas.<br>• You tried to quit during shift but your boss and best friend, Johnny, was not letting you.<br>• He tried to force you to stay which ended up in a fight.<br>• The murder happened at his house at 11:28pm.<br>• After getting rid of the evidence, camera footage shows you heading home at 2:46am.<br>• The murder has not been announced yet.<br>• You haven't told anybody about what happened that night.",
+            "text_color": "#B4D4CF", 
+            "show_cont" : "yes",
+            "show_title" : "yes",
+            "next_state" : [
+                                {
+                                "state_name" : "Question 1",
+                                "key_input"  : "continue"
+                                }
+                            ]
+                },
+    
+        "Question 1" : {
+            "text" : "Detective: Hi, thank you for taking time out of your day to come talk to us. I just have a few questions.<br><br>We have footage of you going home really late, why were you heading home so late?<br><br>",
+            "text_color": "#C4CC41",
+            "timer": 10,
+            
+            "next_state" : [ 
+                        {
+                            "state_name" : "Work_stim",
+                            "key_input"  : "A",
+                            "button_text": "Work"
+                        },
+
+                        {
+                            "state_name" : "Bar_dope",
+                            "key_input"  :"B",
+                            "button_text": "Bar"
+                        }
+                            ]
+                 },
+
+        "Bar_dope": {
+            "next_state" : [ "Bar" ],
+            "dope_change" : 5
+        },
+
+       "Bar" : {
+            "text" : "Detective: Interesting.",
+            "text_color": "#15DE67", 
+            "show_cont" : "yes",
+            "next_state" : [ 
+                    {
+                        "state_name" : "Question 2",
+                        "key_input"  : "continue"
+                    }
+                        ]
+             },
+
+         "Work_stim": {
+            "next_state" : [ "Work" ],
+            "stim_change" : 5
+        },
+
+       "Work" : {
+         "text" : "Detective: Where do you work at?<br><br>",
+         "text_color": "#DE7615", 
+         "timer": 10,
+         "next_state" : [ 
+                          {
+                         "state_name" : "Construction_stim",
+                        "key_input"  : "A",
+                        "button_text": "Construction"
+                        },
+                        {
+                        "state_name" : "Warehouse_dope",
+                        "key_input"  :"B",
+                        "button_text": "Warehouse"
+                        }
+                         ]
+            },
+
+        "Construction_stim": {
+            "next_state" : [ "Construction" ],
+            "stim_change" : 5
+        },
+
+       "Construction" : {
+           "text" : "Detective: Construction workers dont work at night or in the rain..",
+            "text_color": "#A81717", 
+            "show_cont": "yes",
+         "next_state" : [ 
+                        {
+                         "state_name" : "Lost_stim",
+                        "key_input"  : "continue"
+                        }
+                         ]
+            },
+
+        "Warehouse_dope": {
+            "next_state" : [ "Warehouse" ],
+            "dope_change" : 5
+        },
+
+        "Warehouse" : {
+          "text" : "Detective: Hmm, okay.",
+             "text_color": "#15DE67", 
+             "show_cont": "yes",
+           "next_state" : [ 
+                         {
+                         "state_name" : "Question 2",
+                        "key_input"  : "continue"
+                        }
+                         ]
+            },
+
+        "Question 2" : {
+            "text" : "Detective: What did you do yesterday?<br><br>",
+            "text_color": "#C4CC41", 
+            "timer": 10,
+            "next_state" : [ 
+                        {
+                            "state_name" : "Gym_dope",
+                            "key_input"  : "A",
+                            "button_text": "Gym"
+                        },
+                        {
+                            "state_name" : "Beach_stim",
+                            "key_input" : "B",
+                            "button_text": "Beach"
+                        }
+                            ]
+                  },
+
+        "Gym_dope": {
+            "next_state" : [ "Gym" ],
+            "dope_change" : 5
+        },
+
+        "Gym" : {
+          "text" : "Detective: Nice okay.",
+             "text_color": "#15DE67", 
+             "show_cont": "yes",
+            "next_state" : [ 
+                         {
+                         "state_name" : "Question 3",
+                        "key_input"  : "continue"
+                        }
+                         ]
+            },
+
+            "Beach_stim": {
+                "next_state" : [ "Beach" ],
+                "stim_change" : 5
+            },
+
+        "Beach" : {
+          "text" : "Detective: What were you doing there?<br><br>",
+             "text_color": "#DE7615", 
+            "timer": 10,     
+            "next_state" : [ 
+                         {
+                         "state_name" : "Swimming_stim",
+                        "key_input"  : "A",
+                        "button_text": "Swimming"
+                        },
+                        {
+                        "state_name" : "Fishing_dope",
+                        "key_input" : "B",
+                        "button_text": "Fishing"
+                        }
+                         ]
+            },
+
+        "Swimming_stim": {
+            "next_state" : [ "Swimming" ],
+            "stim_change" : 5
+        },
+
+        "Swimming" : {
+          "text" : "Detective: Beach was closed yesterday due to the heavy rain...",
+             "text_color": "#A81717", 
+             "show_cont":"yes",
+            "next_state" : [ 
+                         {
+                         "state_name" : "Lost_stim",
+                        "key_input": "continue"
+                        }
+                         ]
+            },
+
+        "Fishing_dope": {
+            "next_state" : [ "Fishing" ],
+            "dope_change" : 5
+        },
+
+        "Fishing" : {
+            "text" : "Detective: Oh, the pier was open despite the rain.",
+            "text_color": "#15DE67",
+            "show_cont":"yes",
+            "next_state": [
+                {
+                    "state_name": "Question 3",
+                    "key_input": "continue"
+                }
+            ]
+        },
+
+        "Question 3" : {
+            "text" : "Detective: What is your relation to Johnny?<br><br>",
+               "text_color": "#C4CC41", 
+               "timer": 10,
+              "next_state" : [ 
+                           {
+                           "state_name" : "Former friend_stim",
+                          "key_input"  : "A",
+                          "button_text": "Former friend"
+                          },
+                          {
+                          "state_name" : "My boss_dope",
+                          "key_input" : "B",
+                          "button_text": "My boss"
+                          }
+                           ]
+              },
+
+        "My boss_dope": {
+            "next_state" : [ "My boss" ],
+            "dope_change" : 5
+        },
+
+        "My boss" : {
+            "text" : "Detective: Oh, i see...",
+            "text_color": "#15DE67",
+            "show_cont":"yes",
+            "next_state": [
+                {
+                    "state_name": "Question 4",
+                    "key_input": "continue"
+                }
+            ]
+        },
+
+        "Former friend_stim": {
+            "next_state" : [ "Former friend" ],
+            "stim_change" : 5
+        },
+
+        "Former friend" : {
+          "text" : "Detective: What happened between you two?<br><br>",
+             "text_color": "#DE7615", 
+             "timer": 10,
+            "next_state" : [ 
+                         {
+                         "state_name" : "Fight_stim",
+                        "key_input"  : "A",
+                        "button_text": "Got in a fight"
+                        },
+                        {
+                        "state_name" : "Split up_dope",
+                        "key_input" : "B",
+                        "button_text": "Split up"
+                        }
+                         ]
+            },
+
+        "Fight_stim": {
+            "next_state" : [ "Fight" ],
+            "stim_change" : 5
+        },
+
+        "Fight" : {
+           "text" : "Detective: Oh. I see what happened here.",
+            "text_color": "#A81717", 
+            "show_cont": "yes",
+         "next_state" : [ 
+                        {
+                         "state_name" : "Lost_stim",
+                        "key_input"  : "continue"
+                        }
+                         ]
+            },
+        
+        "Split up_dope": {
+            "next_state" : [ "Split up" ],
+            "dope_change" : 5
+        },
+
+        "Split up" : {
+           "text" : "Detective: Oh dang, it happens.",
+            "text_color": "#15DE67", 
+            "show_cont": "yes",
+         "next_state" : [ 
+                        {
+                         "state_name" : "Question 4",
+                        "key_input"  : "continue"
+                        }
+                         ]
+            },
+
+        "Question 4" : {
+            "text" : "Detective brings out the files of you quitting your job.<br><br>Detective: So, why did you quit your job?<br><br>",
+               "text_color": "#C4CC41", 
+               "timer": 10,
+              "next_state" : [ 
+                           {
+                           "state_name" : "Disagreement_stim",
+                          "key_input"  : "A",
+                          "button_text": "Disagreement"
+                          },
+                          {
+                          "state_name" : "New Job_dope",
+                          "key_input" : "B",
+                          "button_text": "New Job"
+                          }
+                           ]
+              },
+
+        "New Job_dope": {
+            "next_state" : [ "New Job" ],
+            "dope_change" : 5
+        },
+
+        "New Job" : {
+            "text" : "Detective: Oh, congrats.",
+            "text_color": "#15DE67",
+            "show_cont":"yes",
+            "next_state": [
+                {
+                    "state_name": "Question 5",
+                    "key_input": "continue"
+                }
+            ]
+        },
+
+        "Disagreement_stim": {
+            "next_state" : [ "Disagreement" ],
+            "stim_change" : 5
+        },
+
+        "Disagreement" : {
+          "text" : "Detective: How did you quit?<br><br>",
+             "text_color": "#DE7615", 
+             "timer": 10,
+            "next_state" : [ 
+                         {
+                         "state_name" : "2 weeks_dope",
+                        "key_input"  : "A",
+                        "button_text": "Put in 2 weeks"
+                        },
+                        {
+                        "state_name" : "Immediately_stim",
+                        "key_input" : "B",
+                        "button_text": "Immediately"
+                        }
+                         ]
+            },
+        
+        "2 weeks_dope": {
+            "next_state" : [ "2 weeks" ],
+            "dope_change" : 5
+        },
+        
+        "2 weeks" : {
+            "text" : "Detective: Oh, okay thats good.",
+            "text_color": "#15DE67",
+            "show_cont":"yes",
+            "next_state": [
+                {
+                    "state_name": "Question 5",
+                    "key_input": "continue"
+                }
+            ]
+        },
+
+        "Immediately_stim": {
+            "next_state" : [ "Immediately" ],
+            "stim_change" : 5
+        },
+
+        "Immediately" : {
+            "text" : "Detective: Oh. I see what happened here.",
+            "text_color": "#A81717", 
+            "show_cont": "yes",
+            "next_state" : [ 
+                         {
+                          "state_name" : "Lost_stim",
+                         "key_input"  : "continue"
+                         }
+                          ]
+             },
+
+        "Question 5" : {
+            "text" : "Detective: Who can back up your story?<br><br>",
+               "text_color": "#C4CC41", 
+               "timer": 10,
+              "next_state" : [ 
+                           {
+                           "state_name" : "No one_stim",
+                          "key_input"  : "A",
+                          "button_text": "No one"
+                          },
+                          {
+                          "state_name" : "Question 6_dope",
+                          "key_input" : "B",
+                          "button_text": "My boss"
+                          }
+                           ]
+              },
+
+        "No one_stim": {
+            "next_state" : [ "No one" ],
+            "stim_change" : 5
+        },
+
+        "No one" : {
+            "text" : "Detective: Oh.. well you could have said your boss since you just quit.. that must mean that you know he has been dead..",
+            "text_color": "#A81717", 
+            "show_cont": "yes",
+            "next_state" : [ 
+                         {
+                          "state_name" : "Lost_stim",
+                         "key_input"  : "continue"
+                         }
+                          ]
+             },
+
+         "Question 6_dope": {
+            "next_state" : [ "Question 6" ],
+            "dope_change" : 5
+        },
+        
+        "Question 6" : {
+            "text" : "Detective: Oh.. well I'm sorry to break the news to you, but your boss has been murdered.<br><br>(Pick a reaction):<br><br>",
+            "text_color": "#C4CC41",
+            "timer": 10,
+            "next_state": [
+                {
+                    "state_name": "Won_dope",
+                    "key_input": "A",
+                    "button_text": "😱"
+                },
+                {
+                "state_name" : "Happy_stim",
+                "key_input" : "B",
+                "button_text": "😊"
+                }
+            ]
+        },
+
+        "Happy_stim": {
+            "next_state" : [ "Happy" ],
+            "stim_change" : 5
+        },
+
+        "Happy" : {
+            "text" : "Detective: Um, why are you happy about that..",
+            "text_color": "#A81717", 
+            "show_cont": "yes",
+            "next_state" : [ 
+                         {
+                          "state_name" : "Lost_stim",
+                         "key_input"  : "continue"
+                         }
+                          ]
+             },
+
+        "Timer_stim":{
+            "next_state" : [ "Timer" ],
+            "stim_change" : 10
+        },
+
+        "Timer":{
+            "text" : "Detective: Um, you're taking a bit too long..",
+            "text_color": "#A81717", 
+            "show_cont": "yes",
+            "next_state" :  [ 
+                {
+                 "state_name" : "Lost_stim",
+                "key_input"  : "continue"
+                }
+                 ]
+        },
+
+        "Lost_stim": {
+            "next_state" : [ "Lost" ],
+            "stim_change" : 10
+        },
+
+        "Lost" : {
+            "text" : "The detective thought you were too suspicious and were sent to life in prison.",
+            "text_color": "#CF0000",
+            "show_none" : "yes",
+            "show_lost" : "yes",
+            "image_change" : "/textGame/assets/prison.jpg"
+        },
+
+        "Won_dope": {
+            "next_state" : [ "Won" ],
+            "dope_change" : 10
+        },
+
+        "Won" : {
+            "text" : "You have successfully got away with murder and moved to Cancun for the rest of your life.<br>Thank you for playing. ",
+            "text_color": "#173D18",
+            "show_none":"yes",
+            "show_won" : "yes",
+            "image_change" : "/textGame/assets/cancun.jpg"
+        }
+
+    }
+}
